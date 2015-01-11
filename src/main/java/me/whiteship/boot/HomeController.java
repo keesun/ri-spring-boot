@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @Value("${application.name}")
+    @Value("${myapp.name}")
     private String applicationName;
 
     @RequestMapping("/")
