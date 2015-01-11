@@ -16,32 +16,12 @@ public class HomeController {
     @Value("${myapp.name}")
     private String appName;
 
-    @Value("${my.secret}")
-    private String mySecret;
-
-    @Value("${my.number}")
-    private int myNumber;
-
-    @Value("${my.bignumber}")
-    private long myBigNumber;
-
-    @Value("${my.number.less.than.ten}")
-    private int myNumberLessThanTen;
-
-    @Value("${my.number.in.range}")
-    private int myNumberInRange;
-
     @Autowired
     private Environment environment;
 
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return "Welcome to " + appName + ", "
-                + "mySecret: " + mySecret + ". "
-                + "myNumber: " + myNumber + ", "
-                + "myBigNumber: " + myBigNumber + ", "
-                + "myNumberLessThanTen: " + myNumberLessThanTen + ", "
-                + "myNumberInRange: " + myNumberInRange;
+        return "Welcome to " + appName;
     }
 
 }
