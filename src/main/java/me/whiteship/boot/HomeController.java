@@ -16,12 +16,15 @@ public class HomeController {
     @Value("${myapp.name}")
     private String appName;
 
+    @Value("${myapp.greeting}")
+    private String greeting;
+
     @Autowired
     private Environment environment;
 
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return "Welcome to " + appName;
+        return greeting + " " + appName;
     }
 
 }
