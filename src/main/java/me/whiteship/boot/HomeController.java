@@ -1,8 +1,6 @@
 package me.whiteship.boot;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,15 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @Value("${myapp.name}")
-    private String appName;
-
-    @Autowired
-    private Environment environment;
+    @Value("${myapp.message}")
+    private String message;
 
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return "Welcome " + appName;
+        return message;
     }
 
 }
