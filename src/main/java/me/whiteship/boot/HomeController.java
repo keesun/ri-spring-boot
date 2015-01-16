@@ -11,12 +11,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
+    @Value("${myapp.name}")
+    private String name;
+
+    @Value("${myapp.greeting}")
+    private String greeting;
+
     @Value("${myapp.message}")
     private String message;
 
+
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return message;
+        return greeting + " " + name + " " + message;
     }
 
 }
