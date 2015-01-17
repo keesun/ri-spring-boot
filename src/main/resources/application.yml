@@ -1,3 +1,9 @@
 myapp:
   name: Keesun
   greeting: Hello
+
+
+my:
+   servers:
+       - dev.bar.com
+       - foo.bar.com
