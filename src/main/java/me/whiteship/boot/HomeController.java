@@ -14,15 +14,15 @@ import java.util.List;
 @Controller
  public class HomeController {
 
-    @Value("${my.servers[0]}")
-    private String server0;
+    @Value("${myapp.name}")
+    private String name;
 
-    @Value("${my.servers[1]}")
-    private String server1;
+    @Value("${myapp.greeting}")
+    private String greeting;
 
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return server0 + " " + server1;
+        return greeting + " " + name;
     }
 
 }

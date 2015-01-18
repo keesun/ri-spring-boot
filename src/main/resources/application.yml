@@ -1,9 +1,22 @@
+# spring.profiles.active 없을 때
+---
 myapp:
   name: Keesun
   greeting: Hello
-
-
-my:
-   servers:
-       - dev.bar.com
-       - foo.bar.com
+...
+# spring.profiles.active=development
+---
+spring:
+    profiles: development
+myapp:
+  name: Keesun-dev
+  greeting: Hello-dev
+...
+# spring.profiles.active=production
+---
+spring:
+    profiles: production
+myapp:
+  name: Keesun-prod
+  greeting: Hello-prod
+...
