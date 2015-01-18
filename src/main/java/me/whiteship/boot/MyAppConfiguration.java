@@ -3,6 +3,8 @@ package me.whiteship.boot;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @author Keeun Baik
  */
@@ -10,13 +12,13 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("wow")
 public class MyAppConfiguration {
 
-    private WowServer server;
+    private List<WowServer> servers;
 
-    public WowServer getServer() {
-        return server;
+    public List<WowServer> getServers() {
+        return servers;
     }
 
-    public void setServer(WowServer server) {
-        this.server = server;
+    public void setServers(List<WowServer> servers) {
+        this.servers = servers;
     }
 }

@@ -20,7 +20,7 @@ import java.util.List;
 
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return myapp.getServer().toString();
+        return myapp.getServers().toString();
     }
 
 }

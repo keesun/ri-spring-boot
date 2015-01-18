@@ -1,2 +1,4 @@
 wow:
-  server: 아즈샤라
+  servers:
+    - 아즈샤라
+    - 하이잘
