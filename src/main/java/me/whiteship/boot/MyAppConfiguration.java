@@ -5,23 +5,37 @@ package me.whiteship.boot;
  */
 public class MyAppConfiguration {
 
-    private String name;
+    private String firstName;
 
-    private String greeting;
+    private String lastName;
 
-    public String getName() {
-        return name;
+    private String greetingMessage;
+
+    public String sayHello() {
+        return greetingMessage + " " + firstName + " " + lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getGreeting() {
-        return greeting;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getGreetingMessage() {
+        return greetingMessage;
+    }
+
+    public void setGreetingMessage(String greetingMessage) {
+        this.greetingMessage = greetingMessage;
     }
 }

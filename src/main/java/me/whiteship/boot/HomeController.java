@@ -20,7 +20,7 @@ import java.util.List;
 
     @RequestMapping("/")
     public @ResponseBody String home() {
-        return myapp.getGreeting() + " " + myapp.getName();
+        return myapp.sayHello();
     }
 
 }
