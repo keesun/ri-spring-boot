@@ -16,10 +16,4 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @ConfigurationProperties("myapp")
-    @Bean
-    public MyAppConfiguration myAppConfiguration() {
-        return new MyAppConfiguration();
-    }
-
 }

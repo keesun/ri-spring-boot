@@ -1,41 +1,24 @@
 package me.whiteship.boot;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
 /**
  * @author Keeun Baik
  */
+@Component
+@ConfigurationProperties("wow")
 public class MyAppConfiguration {
 
-    private String firstName;
+    private List<String> serverNames;
 
-    private String lastName;
-
-    private String greetingMessage;
-
-    public String sayHello() {
-        return greetingMessage + " " + firstName + " " + lastName;
+    public List<String> getServerNames() {
+        return serverNames;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getGreetingMessage() {
-        return greetingMessage;
-    }
-
-    public void setGreetingMessage(String greetingMessage) {
-        this.greetingMessage = greetingMessage;
+    public void setServerNames(List<String> serverNames) {
+        this.serverNames = serverNames;
     }
 }
