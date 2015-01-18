@@ -1,11 +1,8 @@
 package me.whiteship.boot;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 /**
  * @author Keeun Baik
  */
-@ConfigurationProperties("myapp")
 public class MyAppConfiguration {
 
     private String name;
