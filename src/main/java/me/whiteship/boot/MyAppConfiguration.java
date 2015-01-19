@@ -3,7 +3,7 @@ package me.whiteship.boot;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Keeun Baik
@@ -12,13 +12,14 @@ import java.util.List;
 @ConfigurationProperties("wow")
 public class MyAppConfiguration {
 
-    private List<WowServer> servers;
+    @NotNull
+    private String battleTag;
 
-    public List<WowServer> getServers() {
-        return servers;
+    public String getBattleTag() {
+        return battleTag;
     }
 
-    public void setServers(List<WowServer> servers) {
-        this.servers = servers;
+    public void setBattleTag(String battleTag) {
+        this.battleTag = battleTag;
     }
 }
