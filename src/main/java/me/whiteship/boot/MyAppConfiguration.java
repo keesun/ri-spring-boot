@@ -3,23 +3,21 @@ package me.whiteship.boot;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotNull;
-
 /**
  * @author Keeun Baik
  */
 @Component
-@ConfigurationProperties("wow")
+@ConfigurationProperties("app")
 public class MyAppConfiguration {
 
-    @NotNull
-    private String battleTag;
+    @AppName
+    private String name;
 
-    public String getBattleTag() {
-        return battleTag;
+    public String getName() {
+        return name;
     }
 
-    public void setBattleTag(String battleTag) {
-        this.battleTag = battleTag;
+    public void setName(String name) {
+        this.name = name;
     }
 }
