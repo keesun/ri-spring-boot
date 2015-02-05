@@ -1,5 +1,6 @@
 package me.whiteship;
 
+import me.whiteship.eventhandlers.MyAppStartedHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,8 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication("me.whiteship");
-        application.setBanner(new AppBanner());
+        SpringApplication application = new SpringApplication(Application.class);
+        application.addListeners(new MyAppStartedHandler());
         application.run(args);
     }
 }
