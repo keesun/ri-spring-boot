@@ -8,12 +8,11 @@ import org.springframework.context.annotation.Profile;
  * @author Keeun Baik
  */
 @Configuration
-@Profile("production")
-public class ProdConfig {
+@Profile("dev_server")
+public class DevServerConfig {
 
     @Bean
-    public String name() {
-        return "Keesun";
+    public String serverUrl() {
+        return "//localhost:8080/";
     }
-
 }

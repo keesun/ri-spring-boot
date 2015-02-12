@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Profile;
  * @author Keeun Baik
  */
 @Configuration
-@Profile("dev")
-public class DevConfig {
+@Profile("dev_name")
+public class DevNameConfig {
 
     @Bean
     public String name() {
-        return "Whiteship";
+        return "Keesun";
     }
 
 }
